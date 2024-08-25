@@ -2,7 +2,7 @@ import requests
 import base64
 
 # load image
-with open(r'..\images\IMG_0282.JPG', 'rb') as image_file:
+with open(r'..\images\IMG_9332.JPEG', 'rb') as image_file:
 
     #1. read its contents (binary)
     image_data = image_file.read()
@@ -19,7 +19,7 @@ api_endpoint = 'http://localhost:11434/api/generate'
 data = {
     'model': 'llava',
     'stream': False,
-    'prompt': 'Describe the image provided',
+    'prompt': 'Describe the image in detail and describe all text in the photo. All tell me the set number at the bottom of the card.',
     'images': [base64_image_string]
 }
 
